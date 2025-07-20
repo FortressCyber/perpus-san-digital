@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Berita Perpustakaan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card-title { font-weight: bold; }
+    .card-subtitle { font-size: 0.9rem; }
+
+     .card-title { font-weight: bold; }
+    .card-subtitle { font-size: 0.9rem; }
+
+    /* Box shadow dan hover */
+    .card {
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Efek klik */
+    .card:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Sama dengan index -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Perpustakaan Digital</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="berita.html">Berita</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Konten Berita -->
+  <div class="container mt-5">
+    <h2>Berita Terbaru</h2>
+
+    <!-- Kelas Berita -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Layanan Perpustakaan Kini 24 Jam</h5>
+        <h6 class="card-subtitle mb-2 text-muted">19 Juli 2025</h6>
+        <p class="card-text">Perpustakaan kini buka 24 jam untuk mendukung kegiatan belajar mahasiswa dan umum secara lebih fleksibel.</p>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Penambahan Koleksi Buku Digital</h5>
+        <h6 class="card-subtitle mb-2 text-muted">18 Juli 2025</h6>
+        <p class="card-text">Kami telah menambahkan lebih dari 1000 buku digital dalam berbagai kategori seperti sains, teknologi, dan sastra.</p>
+      </div>
+    </div>
+    <!-- Load Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+
+
+    <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
+
+</body>
+</html>

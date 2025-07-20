@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daftar Buku</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .buku-item {
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .buku-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .buku-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .buku-info {
+      padding: 15px;
+    }
+
+    @media (max-width: 576px) {
+      .buku-img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Perpustakaan San Digital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
+        <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+        <li class="nav-item"><a class="nav-link" href="pengumuman.html">Pengumuman</a></li>
+        <li class="nav-item"><a class="nav-link active" href="buku.html">Buku</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Konten -->
+<div class="container mt-5">
+  <h2 class="mb-4">Daftar Buku Baru</h2>
+
+  <!-- Form Tambah Buku -->
+  <form id="formBuku" class="mb-4" enctype="multipart/form-data">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <input type="file" id="gambarBuku" accept="image/*" class="form-control" required />
+      </div>
+      <div class="col-md-4">
+        <input type="text" id="judulBuku" class="form-control" placeholder="Judul Buku" required />
+      </div>
+      <div class="col-md-4">
+        <input type="text" id="deskripsiBuku" class="form-control" placeholder="Deskripsi Buku" required />
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary w-100">Tambah Buku</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Daftar Buku -->
+  <div id="daftarBuku" class="row g-4">
+    <!-- Buku pertama (contoh) -->
+    <div class="col-md-4 col-sm-6">
+      <div class="buku-item">
+        <img src="https://via.placeholder.com/400x200?text=Buku+Contoh" class="buku-img" alt="Buku Contoh">
+        <div class="buku-info">
+          <h5 class="mb-1">Judul Buku Contoh</h5>
+          <p class="text-muted mb-0">Deskripsi singkat tentang buku ini.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Loader -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+
+<!-- JS Buku Tambah -->
+<script>
+  document.getElementById('formBuku').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const judul = document.getElementById('judulBuku').value;
+    const deskripsi = document.getElementById('deskripsiBuku').value;
+    const gambar = document.getElementById('gambarBuku').files[0];
+
+    if (!gambar) return;
+
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      const imgSrc = event.target.result;
+
+      const col = document.createElement('div');
+      col.className = 'col-md-4 col-sm-6';
+      col.innerHTML = `
+        <div class="buku-item">
+          <img src="${imgSrc}" class="buku-img" alt="${judul}" />
+          <div class="buku-info">
+            <h5 class="mb-1">${judul}</h5>
+            <p class="text-muted mb-0">${deskripsi}</p>
+          </div>
+        </div>
+      `;
+      document.getElementById('daftarBuku').prepend(col);
+      document.getElementById('formBuku').reset();
+    };
+    reader.readAsDataURL(gambar);
+  });
+</script>
+<a href="index.html" class="btn btn-primary mt-4">← Kembali ke Beranda</a>
+</div>
+<!-- Load Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

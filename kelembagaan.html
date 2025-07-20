@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelembagaan - Perpustakaan San Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .kelembagaan-container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .kelembagaan-box {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .kelembagaan-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .kelembagaan-title {
+      font-size: 24px;
+      margin-bottom: 1rem;
+      color: #003366;
+    }
+
+    .kelembagaan-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .kelembagaan-box {
+        padding: 1rem;
+      }
+
+      .kelembagaan-title {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ 
+
+  <main class="kelembagaan-container">
+    <div class="kelembagaan-box">
+      <h2 class="kelembagaan-title">Visi & Misi</h2>
+      <p class="kelembagaan-text">
+        Visi kami adalah menjadi pusat informasi dan literasi unggulan yang mendorong kemajuan pendidikan dan riset. 
+        Misi kami meliputi penyediaan akses informasi, pengembangan layanan perpustakaan berbasis digital, 
+        serta mendukung kolaborasi antar unit kerja.
+      </p>
+    </div>
+
+    <div class="kelembagaan-box">
+      <h2 class="kelembagaan-title">Struktur Organisasi</h2>
+      <p class="kelembagaan-text">
+        Perpustakaan San Digital dikelola oleh tim yang terdiri dari Kepala Perpustakaan, Tim Pengelola Koleksi, 
+        Tim IT & Digitalisasi, serta Tim Pelayanan Pengguna. 
+        Struktur organisasi dirancang untuk memberikan pelayanan yang cepat, tanggap, dan adaptif.
+      </p>
+    </div>
+
+    <div class="kelembagaan-box">
+      <h2 class="kelembagaan-title">Peran & Fungsi</h2>
+      <p class="kelembagaan-text">
+        Kami berperan sebagai pusat penyimpanan dan distribusi pengetahuan, 
+        serta sebagai mitra strategis dalam proses pembelajaran dan penelitian. 
+        Fungsi utama meliputi penyediaan koleksi, layanan referensi, dan pelatihan literasi informasi.
+      </p>
+    </div>
+  </main>
+  <div class="kelembagaan-box">
+  <h2 class="kelembagaan-title">Struktur Organisasi Perpustakaan</h2>
+  <div style="overflow-x:auto;">
+    <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+      <thead style="background-color: #003366; color: #fff;">
+        <tr>
+          <th style="padding: 12px; text-align: left; border: 1px solid #ccc;">No</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid #ccc;">Jabatan</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid #ccc;">Nama</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid #ccc;">Kontak</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ccc;">1</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">Kepala Perpustakaan</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">Ikhsan Syahputra</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">ikhsan@perpus.ac.id</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ccc;">2</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">Koordinator Layanan Digital</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">Agus Noviar</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">agus@perpus.ac.id</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ccc;">3</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">Penanggung Jawab Koleksi</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">Ananda Syahputrai</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">ananda@perpus.ac.id</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ccc;">4</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">Staf Pelayanan Pengguna</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">Alamsyah</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">alamsyah@perpus.ac.id</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
+
+
+<!-- Load Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>
+
+</body>
+</html>
+</body>
+</html>

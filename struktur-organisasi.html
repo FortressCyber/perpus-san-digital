@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Struktur Organisasi - Perpustakaan San Digital</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #f0f4f8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #003366;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      color: #ffcc00;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      .nav-menu li a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h1 {
+      color: #003366;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #003366;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 1rem;
+      }
+
+      td {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #003366;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+
+  <!-- Konten Utama -->
+  <div class="container">
+    <h1>Struktur Organisasi Perpustakaan</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Jabatan</th>
+          <th>Nama</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="No">1</td>
+          <td data-label="Jabatan">Kepala Perpustakaan</td>
+          <td data-label="Nama">Brigjen.Pol Dr.Ikhsan Syahputra S.KOM</td>
+          <td data-label="Email">ikhsan@perpus.ac.id</td>
+        </tr>
+        <tr>
+          <td data-label="No">2</td>
+          <td data-label="Jabatan">Wakil Kepala</td>
+          <td data-label="Nama">Ir.Agus Noviar</td>
+          <td data-label="Email">agusnoviar@perpus.ac.id</td>
+        </tr>
+        <tr>
+          <td data-label="No">3</td>
+          <td data-label="Jabatan">Koordinator Koleksi</td>
+          <td data-label="Nama">Ananda Syahputra</td>
+          <td data-label="Email">anandasyahputra@perpus.ac.id</td>
+        </tr>
+        <tr>
+          <td data-label="No">4</td>
+          <td data-label="Jabatan">Koordinator IT dan Digitalisasi</td>
+          <td data-label="Nama">Nurdian Syahputra</td>
+          <td data-label="Email">nurdianputra@perpus.ac.id</td>
+        </tr>
+        <tr>
+          <td data-label="No">5</td>
+          <td data-label="Jabatan">Pelayanan Pengguna</td>
+          <td data-label="Nama">Alamsyah</td>
+          <td data-label="Email">alamsyah@perpus.ac.id</td>
+        </tr>
+        <tr>
+          <td data-label="No">6</td>
+          <td data-label="Jabatan">Administrasi & Keuangan</td>
+          <td data-label="Nama">Muhammad Sofyan</td>
+          <td data-label="Email">muhammadsofyan@perpus.ac.id</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
+
+  
+<!-- Load Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>
+</body>
+</html>

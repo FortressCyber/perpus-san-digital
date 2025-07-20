@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda Perpustakaan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .agenda-item {
+      background-color: #f8f9fa;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 5px solid #0d6efd;
+      border-radius: 5px;
+    }
+    .agenda-date {
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    
+  .agenda-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #0d6efd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .agenda-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+  }
+
+  .agenda-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .agenda-date {
+    font-weight: bold;
+    color: #0d6efd;
+  }
+</style>
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Perpustakaan San Digital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
+        <li class="nav-item"><a class="nav-link active" href="agenda.html">Agenda</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Konten -->
+<div class="container mt-5">
+  <h2 class="mb-4">Agenda Kegiatan Perpustakaan</h2>
+
+  <!-- Form Tambah Agenda -->
+  <form id="formAgenda" class="mb-4">
+    <div class="row g-3">
+      <div class="col-md-3">
+        <input type="date" id="tanggal" class="form-control" required>
+      </div>
+      <div class="col-md-4">
+        <input type="text" id="judul" class="form-control" placeholder="Judul Agenda" required>
+      </div>
+      <div class="col-md-3">
+        <input type="text" id="deskripsi" class="form-control" placeholder="Deskripsi Singkat" required>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Tambah</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Daftar Agenda -->
+  <div id="listAgenda">
+    <!-- Agenda awal -->
+    <div class="agenda-item">
+      <div class="agenda-date">21 Juli 2025</div>
+      <div class="agenda-title fw-bold">Workshop Membaca Cepat</div>
+      <div class="agenda-desc text-muted">Pelatihan untuk siswa SMA</div>
+    </div>
+  </div>
+</div>
+
+<!-- Script untuk Tambah Agenda Dinamis -->
+<script>
+  const form = document.getElementById('formAgenda');
+  const listAgenda = document.getElementById('listAgenda');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const tanggal = document.getElementById('tanggal').value;
+    const judul = document.getElementById('judul').value;
+    const deskripsi = document.getElementById('deskripsi').value;
+
+    const item = document.createElement('div');
+    item.className = 'agenda-item';
+    item.innerHTML = `
+      <div class="agenda-date">${tanggal}</div>
+      <div class="agenda-title fw-bold">${judul}</div>
+      <div class="agenda-desc text-muted">${deskripsi}</div>
+    `;
+
+    listAgenda.prepend(item);
+    form.reset();
+  });
+</script>
+
+ <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
+
+<!-- Load Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
