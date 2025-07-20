@@ -116,211 +116,84 @@
 
   <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
 
-  <div class="search-popup">
-    <div class="search-popup-container">
+  
 
-      <form role="search" method="get" class="form-group" action="index.html">
-        <input type="search" id="search-form" class="form-control border-0 border-bottom" placeholder="Type and press enter" value="" name="s" />
-        <button type="submit" class="search-submit border-0 position-absolute bg-white" style="top: 15px;right: 15px;"><svg class="search" width="24" height="24"><use xlink:href="#search"></use></svg></button>
-      </form>
+  
+  
+  <nav class="navbar fixed-top navbar-expand-lg bg-white text-uppercase fs-6 p-3 border-bottom shadow-sm">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/logo-perpus-removebg-preview.png" alt="Logo Buku" style="height:38px; object-fit:contain; margin-right:10px;">
+      <span class="fw-bold">Perpustakaan</span>
+    </a>
 
-      <h5 class="cat-list-title">Browse Categories</h5>
-      
-      <ul class="cat-list">
-        <li class="cat-list-item">
-          <a href="#" title="Jackets">Jackets</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="T-shirts">T-shirts</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Handbags">Handbags</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Accessories">Accessories</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Cosmetics">Cosmetics</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Dresses">Dresses</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Jumpsuits">Jumpsuits</a>
-        </li>
-      </ul>
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    </div>
-  </div>
-
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart">
-    <div class="offcanvas-header justify-content-center">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
-          <span class="badge bg-primary rounded-pill">3</span>
-        </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Product One</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$1200</span>
+    <!-- Offcanvas for mobile -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto gap-2 gap-md-4">
+          <!-- Profil Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownpages" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownpages">
+              <li><a class="dropdown-item" href="kelembagaan.html">Kelembagaan</a></li>
+              <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisasi</a></li>
+            </ul>
           </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Product Two</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$900</span>
+
+          <!-- Warta Perpustakaan Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownBlog" role="button" data-bs-toggle="dropdown" aria-expanded="false">Warta Perpustakaan</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownBlog">
+              <li><a class="dropdown-item" href="info perpustakaan.html">Info Perpustakaan</a></li>
+              <li><a class="dropdown-item" href="unit kerja.html">Unit Kerja</a></li>
+            </ul>
           </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Product Three</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$1100</span>
+
+          <!-- Aktivitas Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" role="button" data-bs-toggle="dropdown" aria-expanded="false">Aktivitas</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownPages">
+              <li><a class="dropdown-item" href="berita.html">Berita</a></li>
+              <li><a class="dropdown-item" href="testimoni.html">Testimoni</a></li>
+              <li><a class="dropdown-item" href="agenda.html">Agenda</a></li>
+              <li><a class="dropdown-item" href="pengumuman.html">Pengumuman</a></li>
+              <li><a class="dropdown-item" href="buku.html">Buku</a></li>
+            </ul>
           </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$2600</strong>
+
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Kontak</a>
+          </li>
+
+          <!-- Akun Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg width="20" height="20" viewBox="0 0 24 24"><use xlink:href="#user"></use></svg> Akun
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownAccount">
+              <li><a class="dropdown-item" href="login.html">Login Pengguna</a></li>
+              <li><a class="dropdown-item" href="register.html">Daftar Pengguna</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="admin-login.html">Login Admin</a></li>
+            </ul>
           </li>
         </ul>
-
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
       </div>
     </div>
   </div>
-  
-  <nav class="navbar fixed-top navbar-expand-lg bg-white text-uppercase fs-6 p-3 border-bottom align-items-center">
-    <div class="container-fluid">
-      <div class="row justify-content-between align-items-center w-100 gx-0">
+</nav>
 
-        <div class="col-auto">
-          
-
-        <div class="col-auto">
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-4 pe-3">
-              <li class="nav-item d-flex align-items-center">
-                <a class="nav-link active d-flex align-items-center" href="index.html" aria-haspopup="true" aria-expanded="false">
-                <img src="images/logo-perpus-removebg-preview.png" alt="Logo Buku" style="height:38px; width:auto; margin-right:12px; object-fit:contain; flex-shrink:0; vertical-align:middle;">
-                
-                </a>
-              </li>
-              <li class="nav-item dropdown"></li>
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownpages" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Profil </a>
-                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownpages">
-                    <li>
-                      <li class="nav-item"><a class="nav-link" href="kelembagaan.html">Kelembagaan</a>
-                      </li>
-                    <li>
-                      <li class="nav-item"><a class="nav-link" href="struktur-organisasi.html">Struktur Organisasi</a>
-                    </li>
-                  </ul>
-                </li>
-                
-                
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownBlog" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Warta Perpustakaan</a>
-                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownBlog">
-                    <li>
-                      <li class="nav-item"><a class="nav-link" href="info perpustakaan.html">Info Perpustakaan</a>
-                    </li>
-                    <li>
-                       <li class="nav-item"><a class="nav-link" href="unit kerja.html">Unit Kerja</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Aktivitas</a>
-                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
-                    <li>
-                      <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a>
-                      </li>
-                    <li>
-                      <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a>
-                    </li>
-                      <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a>
-                    </li>
-                      <li class="nav-item"><a class="nav-link" href="pengumuman.html">Pengumuman</a>
-                    </li>
-                      <li class="nav-item"><a class="nav-link" href="buku.html">Buku</a>
-                      </li>
-                    <li>
-                    </li>
-                  </ul>
-                </li>
-               
-                  <!-- ...existing code... -->
-                    <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact</a>
-                     </li>
-                    <!-- ...existing code... -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownAccount" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <svg width="22" height="22" viewBox="0 0 24 24" style="vertical-align:middle;"><use xlink:href="#user"></use></svg>
-                    Akun
-                  </a>
-                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownAccount">
-                    <li>
-                      <a href="login.html" class="dropdown-item item-anchor">Login Pengguna</a>
-                    </li>
-                    <li>
-                      <a href="register.html" class="dropdown-item item-anchor">Daftar Pengguna</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                      <a href="admin-login.html" class="dropdown-item item-anchor">Login Admin</a>
-                    </li>
-                  </ul>
-                </li>
-                </ul>
-                </div>
-                </div>
-                </div>
-            </li>
-            <li class="d-none d-lg-block">
-              <a href="cart.html" class="text-uppercase mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart"> <span class="cart-count"></span>
-              </a>
-            </li>
-            <li class="d-lg-none">
-              <a href="#" class="mx-2">
-                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-              </a>
-            </li>
-            <li class="d-lg-none">
-              <a href="#" class="mx-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
-                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#cart"></use></svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      
-      </div>
-
-    </div>
-  </nav>
 
   
   <section id="billboard" class="bg-secondary-subtle py-4">
@@ -426,54 +299,59 @@
   </script>
 
   <section class="features py-5 border-top">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="0">
-          <a href="keanggotaan.html" class="text-decoration-none text-dark">
-            <div class="py-5 feature-box shadow rounded-4 animate__animated animate__fadeInUp h-100">
-              <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
-                <circle cx="8" cy="12" r="2" stroke="currentColor" stroke-width="2"/>
-                <path d="M14 12h4M14 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <h4 class="element-title text-capitalize my-3">Keanggotaan</h4>
-              <p>.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="300">
-          <a href="video-profil.html" class="text-decoration-none text-dark">
-            <div class="py-5 feature-box shadow rounded-4 animate__animated animate__fadeInUp h-100">
-              <!-- Video Profil Layanan: icon play -->
-              <svg width="38" height="38" viewBox="0 0 24 24"><use xlink:href="#play"></use></svg>
-              <h4 class="element-title text-capitalize my-3">Video Profil Layanan</h4>
-              <p>.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="600">
-          <a href="agenda.html" class="text-decoration-none text-dark">
-            <div class="py-5 feature-box shadow rounded-4 animate__animated animate__fadeInUp h-100">
-              <!-- Agenda Kegiatan: icon calendar -->
-              <svg width="38" height="38" viewBox="0 0 24 24"><use xlink:href="#calendar"></use></svg>
-              <h4 class="element-title text-capitalize my-3">Agenda Kegiatan</h4>
-              <p></p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="900">
-          <a href="virtual-tour.html" class="text-decoration-none text-dark">
-            <div class="py-5 feature-box shadow rounded-4 animate__animated animate__fadeInUp h-100">
-              <!-- Virtual Tour Gedung: icon link -->
-              <svg width="38" height="38" viewBox="0 0 24 24"><use xlink:href="#link"></use></svg>
-              <h4 class="element-title text-capitalize my-3">Virtual Tour Gedung</h4>
-              <p></p>
-            </div>
-          </a>
-        </div>
+  <div class="container">
+    <div class="row g-4">
+      <!-- Keanggotaan -->
+      <div class="col-12 col-sm-6 col-lg-3 text-center" data-aos="fade-in" data-aos-delay="0">
+        <a href="keanggotaan.html" class="text-decoration-none text-dark d-block h-100">
+          <div class="py-5 px-3 feature-box shadow rounded-4 animate__animated animate__fadeInUp h-100 hover-effect">
+            <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+              <circle cx="8" cy="12" r="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 12h4M14 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <h4 class="element-title text-capitalize my-3">Keanggotaan</h4>
+            <p class="small">Informasi layanan keanggotaan perpustakaan secara lengkap.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Video Profil Layanan -->
+      <div class="col-12 col-sm-6 col-lg-3 text-center" data-aos="fade-in" data-aos-delay="300">
+        <a href="video-profil.html" class="text-decoration-none text-dark d-block h-100">
+          <div class="py-5 px-3 feature-box shadow rounded-4 animate__animated animate__fadeInUp h-100 hover-effect">
+            <svg width="38" height="38" viewBox="0 0 24 24"><use xlink:href="#play"></use></svg>
+            <h4 class="element-title text-capitalize my-3">Video Profil Layanan</h4>
+            <p class="small">Lihat video pengenalan layanan yang tersedia di perpustakaan.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Agenda Kegiatan -->
+      <div class="col-12 col-sm-6 col-lg-3 text-center" data-aos="fade-in" data-aos-delay="600">
+        <a href="agenda.html" class="text-decoration-none text-dark d-block h-100">
+          <div class="py-5 px-3 feature-box shadow rounded-4 animate__animated animate__fadeInUp h-100 hover-effect">
+            <svg width="38" height="38" viewBox="0 0 24 24"><use xlink:href="#calendar"></use></svg>
+            <h4 class="element-title text-capitalize my-3">Agenda Kegiatan</h4>
+            <p class="small">Jadwal dan informasi kegiatan terbaru dari perpustakaan.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Virtual Tour Gedung -->
+      <div class="col-12 col-sm-6 col-lg-3 text-center" data-aos="fade-in" data-aos-delay="900">
+        <a href="virtual-tour.html" class="text-decoration-none text-dark d-block h-100">
+          <div class="py-5 px-3 feature-box shadow rounded-4 animate__animated animate__fadeInUp h-100 hover-effect">
+            <svg width="38" height="38" viewBox="0 0 24 24"><use xlink:href="#link"></use></svg>
+            <h4 class="element-title text-capitalize my-3">Virtual Tour Gedung</h4>
+            <p class="small">Jelajahi gedung perpustakaan secara virtual dari rumah Anda.</p>
+          </div>
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   <style>
   .feature-box {
     transition: box-shadow 0.3s, transform 0.3s;
@@ -492,51 +370,56 @@
     </div>
   </section>
 
-  <section class="categories full-width-container overflow-hidden py-5 slide-clip-animation" data-aos="fade-in">
-    <div class="container">
-      <div class="row d-flex flex-wrap justify-content-center">
-        <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
-          <div class="cat-item image-zoom-effect position-relative w-100">
-            <div class="image-holder">
-              <a href="shop-four-column-wide.html">
-                <img src="images/buku madilog.jpg" alt="categories" class="product-image img-fluid" style="width:100%; height:350px; object-fit:cover;">
-              </a>
-              <div class="category-content position-absolute bottom-0 p-5 text-uppercase w-100">
-                <h4 class="section-title text-white">Best Seller</h4>
-                <a href="shop-four-column-wide.html" class="text-white btn-link"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
-          <div class="cat-item image-zoom-effect position-relative w-100">
-            <div class="image-holder">
-              <a href="shop-four-column-wide.html">
-                <img src="images/buku Anak Semua Bangsa (Lentera Dipantara).jpg" alt="categories" class="product-image img-fluid" style="width:100%; height:350px; object-fit:cover;">
-              </a>
-              <div class="category-content position-absolute bottom-0 p-5 text-uppercase w-100">
-                <h4 class="section-title text-white">Best Seller</h4>
-                <a href="shop-four-column-wide.html" class="text-white btn-link"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
-          <div class="cat-item image-zoom-effect position-relative w-100">
-            <div class="image-holder">
-              <a href="shop-four-column-wide.html">
-                <img src="images/buku teruslah bodoh jangan pintar.jpg" alt="categories" class="product-image img-fluid" style="width:100%; height:350px; object-fit:cover;">
-              </a>
-              <div class="category-content position-absolute bottom-0 p-5 text-uppercase w-100">
-                <h4 class="section-title text-white">Best Seller</h4>
-                <a href="shop-four-column-wide.html" class="text-white btn-link"></a>
-              </div>
+ <section class="categories full-width-container overflow-hidden py-5 slide-clip-animation" data-aos="fade-in">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Buku 1 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex">
+        <div class="cat-item image-zoom-effect position-relative w-100 rounded-4 overflow-hidden shadow-sm">
+          <div class="image-holder">
+            <a href="shop-four-column-wide.html">
+              <img src="images/buku madilog.jpg" alt="Buku Madilog" class="product-image img-fluid w-100" style="height: 350px; object-fit: cover;">
+            </a>
+            <div class="category-content position-absolute bottom-0 start-0 w-100 p-4" style="background: rgba(0,0,0,0.5);">
+              <h4 class="section-title text-white m-0">Best Seller</h4>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Buku 2 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex">
+        <div class="cat-item image-zoom-effect position-relative w-100 rounded-4 overflow-hidden shadow-sm">
+          <div class="image-holder">
+            <a href="shop-four-column-wide.html">
+              <img src="images/buku Anak Semua Bangsa (Lentera Dipantara).jpg" alt="Buku Anak Semua Bangsa" class="product-image img-fluid w-100" style="height: 350px; object-fit: cover;">
+            </a>
+            <div class="category-content position-absolute bottom-0 start-0 w-100 p-4" style="background: rgba(0,0,0,0.5);">
+              <h4 class="section-title text-white m-0">Best Seller</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buku 3 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex">
+        <div class="cat-item image-zoom-effect position-relative w-100 rounded-4 overflow-hidden shadow-sm">
+          <div class="image-holder">
+            <a href="shop-four-column-wide.html">
+              <img src="images/buku teruslah bodoh jangan pintar.jpg" alt="Buku Teruslah Bodoh" class="product-image img-fluid w-100" style="height: 350px; object-fit: cover;">
+            </a>
+            <div class="category-content position-absolute bottom-0 start-0 w-100 p-4" style="background: rgba(0,0,0,0.5);">
+              <h4 class="section-title text-white m-0">Best Seller</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section class="product-grid py-5 clearfix">
     <div class="container">
@@ -576,160 +459,167 @@
           }
         </style>
 
-        <div class="grid p-0 clearfix">
-            <div class="row g-4 justify-content-center">
-            <!-- Buku 1 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card shadow-sm w-100 h-100">
-              <img src="images/buku madilog.jpg" class="card-img-top img-fluid" alt="Buku Madilog">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-uppercase fs-5 mb-2">Madilog</h5>
-                <p class="card-text flex-grow-1">Buku filsafat karya Tan Malaka yang membahas logika dan pemikiran kritis.</p>
-                <div class="d-flex justify-content-between align-items-center mt-2">
-                <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-                </a>
-                </div>
-              </div>
-              </div>
-            </div>
-            <!-- Buku 2 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card shadow-sm w-100 h-100">
-              <img src="images/buku menguyah rindu.jpg" class="card-img-top img-fluid" alt="Mengunyah Rindu">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-uppercase fs-5 mb-2">Mengunyah Rindu</h5>
-                <p class="card-text flex-grow-1">Kumpulan puisi dan kisah tentang cinta dan kerinduan.</p>
-                <div class="d-flex justify-content-between align-items-center mt-2">
-                <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-                </a>
-                </div>
-              </div>
-              </div>
-            </div>
-            <!-- Buku 3 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card shadow-sm w-100 h-100">
-              <img src="images/Buku Coding.jpg" class="card-img-top img-fluid" alt="Buku Coding">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-uppercase fs-5 mb-2">Buku Coding</h5>
-                <p class="card-text flex-grow-1">Panduan belajar coding untuk pemula hingga mahir.</p>
-                <div class="d-flex justify-content-between align-items-center mt-2">
-                <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-                </a>
-                </div>
-              </div>
-              </div>
-            </div>
-            </div>
-            <!-- Tambahan kolom buku baru di bawahnya -->
-            <div class="row g-4 justify-content-center mt-2">
-            <!-- Buku 4 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card shadow-sm w-100 h-100">
-              <img src="images/buku Anak Semua Bangsa (Lentera Dipantara).jpg" class="card-img-top img-fluid" alt="Anak Semua Bangsa">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-uppercase fs-5 mb-2">Anak Semua Bangsa</h5>
-                <p class="card-text flex-grow-1">Novel karya Pramoedya Ananta Toer, bagian dari Tetralogi Buru.</p>
-                <div class="d-flex justify-content-between align-items-center mt-2">
-                <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-                </a>
-                </div>
-              </div>
-              </div>
-            </div>
-            <!-- Buku 5 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card shadow-sm w-100 h-100">
-              <img src="images/buku teruslah bodoh jangan pintar.jpg" class="card-img-top img-fluid" alt="Teruslah Bodoh Jangan Pintar">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-uppercase fs-5 mb-2">Teruslah Bodoh Jangan Pintar</h5>
-                <p class="card-text flex-grow-1">Buku motivasi yang mengajak berpikir out of the box.</p>
-                <div class="d-flex justify-content-between align-items-center mt-2">
-                <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-                </a>
-                </div>
-              </div>
-              </div>
-            </div>
-            <!-- Buku 6 -->
-            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card shadow-sm w-100 h-100">
-              <img src="images/buku insecurity.jpg" class="card-img-top img-fluid" alt="Buku Insecurity">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-uppercase fs-5 mb-2">Insecurity</h5>
-                <p class="card-text flex-grow-1">Buku pengembangan diri untuk mengatasi rasa insecure.</p>
-                <div class="d-flex justify-content-between align-items-center mt-2">
-                <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-                </a>
-                </div>
-              </div>
-              </div>
-            </div>
+       <div class="grid p-0 clearfix">
+  <div class="row g-4 justify-content-center">
+    
+    <!-- START: Kartu Buku -->
+    <!-- Template Buku -->
+    <!-- Salin dan sesuaikan untuk setiap buku baru -->
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 h-100 d-flex flex-column">
+        <img src="images/buku madilog.jpg" class="card-img-top img-fluid" alt="Buku Madilog" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-uppercase fs-5 mb-2">Madilog</h5>
+          <p class="card-text flex-grow-1">Buku filsafat karya Tan Malaka yang membahas logika dan pemikiran kritis.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
+            <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-             <!-- Tambahan kolom buku baru di bawahnya -->
-            <div class="row g-4 justify-content-center mt-2">
-              <!-- Buku 7 -->
-              <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card shadow-sm w-100 h-100">
-              <img src="images/buku coding.jpg" class="card-img-top img-fluid" alt="Buku Coding">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-uppercase fs-5 mb-2">Buku Coding</h5>
-                <p class="card-text flex-grow-1">Panduan belajar coding untuk pemula
-                </p>
-                <div class="d-flex justify-content-between align-items-center mt-2">
-                <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-                </a>
-                </div>
-              </div>
-              </div>
-              </div>
-              <!-- Buku 8 -->
-              <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card shadow-sm w-100 h-100">
-              <img src="images/Novel bu pelukmu.jpg" class="card-img-top img-fluid" alt="Anak Semua Bangsa">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-uppercase fs-5 mb-2">Di Saat Dunia Begitu Keras Menempaku</h5>
-                <p class="card-text flex-grow-1">Bu, Aku Ingin Pelukmu - Reza Mustopa</p>
-                <div class="d-flex justify-content-between align-items-center mt-2">
-                <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-                  </a>
-                </div>    
-              </div>
-              </div>
-            </div>
-            <!-- Buku 9 -->
+    <!-- Buku 2 -->
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 h-100 d-flex flex-column">
+        <img src="images/buku menguyah rindu.jpg" class="card-img-top img-fluid" alt="Mengunyah Rindu" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-uppercase fs-5 mb-2">Mengunyah Rindu</h5>
+          <p class="card-text flex-grow-1">Kumpulan puisi dan kisah tentang cinta dan kerinduan.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
+            <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card shadow-sm w-100 h-100">
-              <img src="images/buku teknik informatika.jpg" class="card-img-top img-fluid" alt="Teruslah Bodoh Jangan Pintar">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-uppercase fs-5 mb-2">Teknik Informatika</h5>
-                <p class="card-text flex-grow-1">Buku mengenai seputaran pemrograman.</p>
-                <div class="d-flex justify-content-between align-items-center mt-2">
-                <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
-                  </a>  
-                </div>
-              </div>
-              </div>
-            </div>
+    <!-- Buku 3 -->
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 h-100 d-flex flex-column">
+        <img src="images/Buku Coding.jpg" class="card-img-top img-fluid" alt="Buku Coding" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-uppercase fs-5 mb-2">Buku Coding</h5>
+          <p class="card-text flex-grow-1">Panduan belajar coding untuk pemula hingga mahir.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
+            <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buku 4 -->
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 h-100 d-flex flex-column">
+        <img src="images/buku Anak Semua Bangsa (Lentera Dipantara).jpg" class="card-img-top img-fluid" alt="Anak Semua Bangsa" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-uppercase fs-5 mb-2">Anak Semua Bangsa</h5>
+          <p class="card-text flex-grow-1">Novel karya Pramoedya Ananta Toer, bagian dari Tetralogi Buru.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
+            <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buku 5 -->
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 h-100 d-flex flex-column">
+        <img src="images/buku teruslah bodoh jangan pintar.jpg" class="card-img-top img-fluid" alt="Teruslah Bodoh Jangan Pintar" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-uppercase fs-5 mb-2">Teruslah Bodoh Jangan Pintar</h5>
+          <p class="card-text flex-grow-1">Buku motivasi yang mengajak berpikir out of the box.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
+            <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buku 6 -->
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 h-100 d-flex flex-column">
+        <img src="images/buku insecurity.jpg" class="card-img-top img-fluid" alt="Buku Insecurity" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-uppercase fs-5 mb-2">Insecurity</h5>
+          <p class="card-text flex-grow-1">Buku pengembangan diri untuk mengatasi rasa insecure.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
+            <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buku 7 -->
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 h-100 d-flex flex-column">
+        <img src="images/Buku Figma.jpg" class="card-img-top img-fluid" alt="Buku Figma" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-uppercase fs-5 mb-2">Buku Figma</h5>
+          <p class="card-text flex-grow-1">Panduan desain UI/UX menggunakan Figma dari dasar hingga mahir.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
+            <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buku 8 -->
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 h-100 d-flex flex-column">
+        <img src="images/Novel bu pelukmu.jpg" class="card-img-top img-fluid" alt="Di Saat Dunia Begitu Keras Menempaku" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-uppercase fs-5 mb-2">Di Saat Dunia Begitu Keras Menempaku</h5>
+          <p class="card-text flex-grow-1">Bu, Aku Ingin Pelukmu - Reza Mustopa</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
+            <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buku 9 -->
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 h-100 d-flex flex-column">
+        <img src="images/buku teknik informatika.jpg" class="card-img-top img-fluid" alt="Teknik Informatika" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-uppercase fs-5 mb-2">Teknik Informatika</h5>
+          <p class="card-text flex-grow-1">Buku mengenai seputaran pemrograman dan teknologi informasi.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="single-product.html" class="btn btn-primary btn-sm">Selengkapnya</a>
+            <a href="wishlist.html" class="btn-icon btn-wishlist ms-2">
+              <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END: Kartu Buku -->
+  </div>
+</div>
 
               
               
