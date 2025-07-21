@@ -1,16 +1,150 @@
-<!-- unit-kerja.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Kerja - Perpustakaan San Digital</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .unit-section {
+      padding: 2rem 1rem;
+    }
+
+    .unit-container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .unit-container h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #003366;
+    }
+
+    .unit-container p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    .unit-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .unit-table th,
+    .unit-table td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .unit-table th {
+      background-color: #003366;
+      color: #fff;
+    }
+
+    /* Responsive Table for Mobile */
+    @media (max-width: 600px) {
+      .unit-table, .unit-table thead, .unit-table tbody, .unit-table th, .unit-table td, .unit-table tr {
+        display: block;
+        width: 100%;
+      }
+
+      .unit-table thead {
+        display: none;
+      }
+
+      .unit-table tr {
+        margin-bottom: 1rem;
+        background: #f9f9f9;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .unit-table td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        min-height: 2.5rem;
+      }
+
+      .unit-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #003366;
+      }
+    }
+
+    .unit-table tr:hover {
+      background-color: #e6f2ff;
+      transition: background-color 0.3s;
+    }
+
+    .unit-table tr.clicked {
+      animation: clickPop 0.3s ease;
+      background-color: #d9f2ff !important;
+    }
+
+    @keyframes clickPop {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.98); }
+      100% { transform: scale(1); }
+    }
+
+    .btn-kembali {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      padding: 0.75rem 1.5rem;
+      background-color: #003366;
+      color: white;
+      border-radius: 6px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-kembali:hover {
+      background-color: #002244;
+    }
+  </style>
+</head>
+<body>
+
 <section id="unit-kerja" class="unit-section">
   <div class="unit-container">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <h2>🧩 Daftar Unit Kerja Perpustakaan</h2>
     <p>Berikut adalah struktur organisasi dan unit kerja di Perpustakaan San Digital.</p>
 
-    <!-- FIREBASE PROJECT -->
-
+    <!-- FIREBASE INIT (jika digunakan) -->
     <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js"></script>
-
     <script src="./scripts/firebase-config.js"></script>
-
 
     <div class="table-wrapper">
       <table class="unit-table">
@@ -24,28 +158,28 @@
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Administrasi</td>
-            <td>Ibu Ratna Sari</td>
-            <td>Mengelola dokumen, surat menyurat, dan data keanggotaan perpustakaan.</td>
+            <td data-label="No">1</td>
+            <td data-label="Nama Unit">Administrasi</td>
+            <td data-label="Penanggung Jawab">Muhammad Sofyan</td>
+            <td data-label="Deskripsi Tugas">Mengelola dokumen, surat menyurat, dan data keanggotaan perpustakaan.</td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>Teknis Buku</td>
-            <td>Bapak Andi Wijaya</td>
-            <td>Pengelolaan koleksi buku, katalogisasi, dan pengkodean.</td>
+            <td data-label="No">2</td>
+            <td data-label="Nama Unit">Teknis Buku</td>
+            <td data-label="Penanggung Jawab">Ananda Syahputra</td>
+            <td data-label="Deskripsi Tugas">Pengelolaan koleksi buku, katalogisasi, dan pengkodean.</td>
           </tr>
           <tr>
-            <td>3</td>
-            <td>Layanan Peminjaman</td>
-            <td>Ibu Sinta Dewi</td>
-            <td>Melayani peminjaman dan pengembalian buku serta konsultasi pengguna.</td>
+            <td data-label="No">3</td>
+            <td data-label="Nama Unit">Layanan Peminjaman</td>
+            <td data-label="Penanggung Jawab">Teddy Perdana</td>
+            <td data-label="Deskripsi Tugas">Melayani peminjaman dan pengembalian buku serta konsultasi pengguna.</td>
           </tr>
           <tr>
-            <td>4</td>
-            <td>Teknologi Informasi</td>
-            <td>Bapak Dedi Pratama</td>
-            <td>Pengelolaan sistem digital, website, dan jaringan perpustakaan.</td>
+            <td data-label="No">4</td>
+            <td data-label="Nama Unit">Teknologi Informasi</td>
+            <td data-label="Penanggung Jawab">Muhaikal Wira</td>
+            <td data-label="Deskripsi Tugas">Pengelolaan sistem digital, website, dan jaringan perpustakaan.</td>
           </tr>
         </tbody>
       </table>
@@ -53,19 +187,27 @@
   </div>
 </section>
 
+<!-- Tombol Kembali -->
 <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
-   <!-- Load Footer -->
-<div id="footer-placeholder"></div>
 
+<!-- Footer Loader -->
+<div id="footer-placeholder"></div>
 <script>
   fetch('footer.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer-placeholder').innerHTML = data;
     });
+
+  // Efek animasi saat baris diklik
+  const rows = document.querySelectorAll('.unit-table tbody tr');
+  rows.forEach(row => {
+    row.addEventListener('click', () => {
+      row.classList.add('clicked');
+      setTimeout(() => row.classList.remove('clicked'), 300);
+    });
+  });
 </script>
-
-
 
 </body>
 </html>

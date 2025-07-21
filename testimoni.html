@@ -1,89 +1,74 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Testimoni Pengguna</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .testimoni-card {
-      background-color: #f8f9fa;
-      border-left: 4px solid #0d6efd;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-     .card-title { font-weight: bold; }
-    .card-subtitle { font-size: 0.9rem; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimoni - Perpustakaan Digital</title>
 
-    /* Box shadow dan hover */
-    .card {
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Efek klik */
-    .card:active {
-      transform: scale(0.98);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-  </style>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
 
-<!-- Navbar Sama -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Perpustakaan San Digital</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- Navbar Dinamis -->
+  <div id="navbar-placeholder"></div>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
-        <li class="nav-item"><a class="nav-link active" href="testimoni.html">Testimoni</a></li>
-      </ul>
+  <!-- Konten Utama -->
+  <main class="container-fluid py-5 px-3 px-md-5 bg-light min-vh-100">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
+      <h2 class="fw-bold text-primary mb-3 mb-md-0">Apa Kata Mereka</h2>
+      <a href="index.html" class="btn btn-outline-primary d-inline-flex align-items-center">
+        <i class="bi bi-arrow-left me-2"></i>Kembali ke Beranda
+      </a>
     </div>
-  </div>
-</nav>
 
-<!-- Konten Testimoni -->
-<div class="container mt-5">
-  <h2>Testimoni Pengguna</h2>
+    <!-- Testimoni Container -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="testimoni-container">
+      
+      <!-- Testimoni 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-quote text-primary fs-1"></i>
+            <p class="card-text">"Perpustakaan digital ini sangat membantu saya dalam mengakses referensi kapan saja dan di mana saja. Tampilan yang ramah pengguna dan koleksi buku yang lengkap sangat saya apresiasi."</p>
+            <h6 class="card-title text-end fw-semibold">– Dini, Mahasiswa</h6>
+          </div>
+        </div>
+      </div>
 
-  <div class="testimoni-card">
-    <p>"Perpustakaan ini sangat membantu saya menyelesaikan tugas akhir. Akses bukunya cepat dan lengkap!"</p>
-    <small>- Rina, Mahasiswa</small>
-  </div>
+      <!-- Testimoni 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-quote text-primary fs-1"></i>
+            <p class="card-text">"Sebagai dosen, saya merasa sangat terbantu dengan fitur pencarian buku yang cepat dan efektif. Ini memudahkan saya menyiapkan materi kuliah."</p>
+            <h6 class="card-title text-end fw-semibold">– Pak Arif, Dosen</h6>
+          </div>
+        </div>
+      </div>
 
-  <div class="testimoni-card">
-    <p>"Koleksi digitalnya sangat update. Saya bisa baca buku favorit saya di rumah."</p>
-    <small>- Budi, Guru SMA</small>
-  </div>
+      <!-- Testimoni 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-quote text-primary fs-1"></i>
+            <p class="card-text">"Anak-anak saya sangat senang membaca melalui platform ini. Desainnya menarik dan navigasinya mudah dipahami untuk semua usia."</p>
+            <h6 class="card-title text-end fw-semibold">– Ibu Sari, Orang Tua</h6>
+          </div>
+        </div>
+      </div>
 
-  <div class="testimoni-card">
-    <p>"Tampilan situsnya sangat ramah pengguna, bahkan untuk orang tua seperti saya."</p>
-    <small>- Pak Surya, Pustakawan Pensiun</small>
-  </div>
+    </div>
+  </main>
 
- <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
+  <!-- Footer Dinamis -->
+  <div id="footer-placeholder"></div>
 
-<!-- Load Footer -->
-<div id="footer-placeholder"></div>
-
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-</script>
-
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

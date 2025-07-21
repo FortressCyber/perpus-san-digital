@@ -1,86 +1,163 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Berita Perpustakaan</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Berita - Perpustakaan San Digital</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Custom Styles -->
   <style>
-    .card-title { font-weight: bold; }
-    .card-subtitle { font-size: 0.9rem; }
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-     .card-title { font-weight: bold; }
-    .card-subtitle { font-size: 0.9rem; }
-
-    /* Box shadow dan hover */
-    .card {
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    .berita-card {
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
       cursor: pointer;
     }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+    .berita-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    /* Efek klik */
-    .card:active {
+    .berita-card:active {
       transform: scale(0.98);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-kembali {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #0056b3;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .btn-kembali:hover {
+      color: #003366;
+    }
+
+    footer {
+      margin-top: 3rem;
+    }
+
+    .spinner-border {
+      width: 3rem;
+      height: 3rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar Sama dengan index -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Perpustakaan Digital</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Placeholder untuk Navbar -->
+  <div id="navbar-placeholder"></div>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link active" href="berita.html">Berita</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Konten Berita -->
-  <div class="container mt-5">
-    <h2>Berita Terbaru</h2>
-
-    <!-- Kelas Berita -->
-    <div class="card mb-3">
-      <div class="card-body">
-        <h5 class="card-title">Layanan Perpustakaan Kini 24 Jam</h5>
-        <h6 class="card-subtitle mb-2 text-muted">19 Juli 2025</h6>
-        <p class="card-text">Perpustakaan kini buka 24 jam untuk mendukung kegiatan belajar mahasiswa dan umum secara lebih fleksibel.</p>
-      </div>
+  <!-- Konten Utama -->
+  <main class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+      <h2 class="mb-3">📰 Berita Terbaru</h2>
+      <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
     </div>
 
-    <div class="card mb-3">
-      <div class="card-body">
-        <h5 class="card-title">Penambahan Koleksi Buku Digital</h5>
-        <h6 class="card-subtitle mb-2 text-muted">18 Juli 2025</h6>
-        <p class="card-text">Kami telah menambahkan lebih dari 1000 buku digital dalam berbagai kategori seperti sains, teknologi, dan sastra.</p>
+    <!-- Grid Berita -->
+    <div class="row" id="berita-container">
+      <!-- Loading Spinner -->
+      <div class="col-12 text-center">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-2">Memuat berita...</p>
       </div>
     </div>
-    <!-- Load Footer -->
-<div id="footer-placeholder"></div>
+  </main>
 
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
+  <!-- Placeholder Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dynamic Navbar & Footer -->
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+
+  <!-- Berita Data Simulation (Bisa diganti dengan Firebase/Fetched JSON) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const beritaContainer = document.getElementById('berita-container');
+      beritaContainer.innerHTML = ''; // Bersihkan loading spinner
+
+      // Simulasi data berita
+      const beritaList = [
+        {
+          judul: "Perpustakaan San Digital Luncurkan Koleksi E-Book Terbaru",
+          gambar: "images/berita1.jpg",
+          deskripsi: "Lebih dari 500 judul baru kini tersedia secara gratis untuk anggota perpustakaan.",
+          tanggal: "21 Juli 2025"
+        },
+        {
+          judul: "Workshop Literasi Digital: Gratis untuk Mahasiswa!",
+          gambar: "images/berita2.jpg",
+          deskripsi: "Daftar sekarang dan tingkatkan kemampuan literasi digital Anda.",
+          tanggal: "19 Juli 2025"
+        },
+        {
+          judul: "Perpustakaan Buka Hingga Malam Selama Musim Ujian",
+          gambar: "images/berita3.jpg",
+          deskripsi: "Fasilitas tambahan dan jam operasional diperpanjang untuk mendukung pembelajaran.",
+          tanggal: "18 Juli 2025"
+        }
+      ];
+
+      beritaList.forEach((item, index) => {
+        const col = document.createElement('div');
+        col.className = 'col-md-4 mb-4';
+
+        const card = document.createElement('div');
+        card.className = 'card berita-card h-100 shadow-sm';
+        card.innerHTML = `
+          <img src="${item.gambar}" class="card-img-top" alt="${item.judul}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${item.judul}</h5>
+            <p class="card-text text-muted">${item.tanggal}</p>
+            <p class="card-text">${item.deskripsi}</p>
+            <a href="#" class="mt-auto btn btn-outline-primary btn-sm w-100">Selengkapnya</a>
+          </div>
+        `;
+
+        // Efek klik animasi tambahan
+        card.addEventListener('click', () => {
+          card.style.animation = 'clickPop 0.2s ease';
+          setTimeout(() => card.style.animation = '', 200);
+        });
+
+        col.appendChild(card);
+        beritaContainer.appendChild(col);
+      });
     });
-</script>
 
-
-    <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
+    // Tambahkan animasi keyframes
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes clickPop {
+        0% { transform: scale(1); }
+        50% { transform: scale(0.97); }
+        100% { transform: scale(1); }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Struktur Organisasi - Perpustakaan San Digital</title>
+  <title>Struktur Organisasi - Perpustakaan SANDIGI Library</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -111,6 +111,7 @@
       color: white;
     }
 
+    /* Tabel responsif untuk layar kecil */
     @media (max-width: 600px) {
       table, thead, tbody, th, td, tr {
         display: block;
@@ -123,6 +124,10 @@
 
       tr {
         margin-bottom: 1rem;
+        background: #f9f9f9;
+        border-radius: 8px;
+        padding: 0.5rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
       }
 
       td {
@@ -130,6 +135,7 @@
         border-bottom: 1px solid #ccc;
         position: relative;
         padding-left: 50%;
+        min-height: 2.5rem;
       }
 
       td::before {
@@ -140,10 +146,40 @@
         color: #003366;
       }
     }
+
+    .btn-kembali {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      padding: 0.75rem 1.5rem;
+      background-color: #003366;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    .btn-kembali:hover {
+      background-color: #002244;
+    }
   </style>
 </head>
 <body>
-  
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">SANDIGI Library</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="struktur.html" class="active">Struktur</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Konten Utama -->
   <div class="container">
@@ -161,13 +197,13 @@
         <tr>
           <td data-label="No">1</td>
           <td data-label="Jabatan">Kepala Perpustakaan</td>
-          <td data-label="Nama">Brigjen.Pol Dr.Ikhsan Syahputra S.KOM</td>
+          <td data-label="Nama">Dr. Ikhsan Aullia Syahputra, S.Kom</td>
           <td data-label="Email">ikhsan@perpus.ac.id</td>
         </tr>
         <tr>
           <td data-label="No">2</td>
           <td data-label="Jabatan">Wakil Kepala</td>
-          <td data-label="Nama">Ir.Agus Noviar</td>
+          <td data-label="Nama">Ir. Agus Noviar Putra, S.Pd., M.T</td>
           <td data-label="Email">agusnoviar@perpus.ac.id</td>
         </tr>
         <tr>
@@ -178,7 +214,7 @@
         </tr>
         <tr>
           <td data-label="No">4</td>
-          <td data-label="Jabatan">Koordinator IT dan Digitalisasi</td>
+          <td data-label="Jabatan">Koordinator IT & Digitalisasi</td>
           <td data-label="Nama">Nurdian Syahputra</td>
           <td data-label="Email">nurdianputra@perpus.ac.id</td>
         </tr>
@@ -197,22 +233,19 @@
       </tbody>
     </table>
   </div>
+
   <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
 
-  
-<!-- Load Footer -->
-<div id="footer-placeholder"></div>
+  <!-- Load Footer -->
+  <div id="footer-placeholder"></div>
 
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-</script>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
 
-
-</body>
-</html>
 </body>
 </html>

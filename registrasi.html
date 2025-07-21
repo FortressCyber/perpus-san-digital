@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi - Perpustakaan Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Placeholder Navbar (jika ada) -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="auth-form-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- Responsif: lebar kolom 10 di layar kecil, 6 di medium, 5 di large -->
+        <div class="col-sm-10 col-md-6 col-lg-5">
+          <div class="card shadow-lg border-0">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="text-center mb-4">Buat Akun Baru</h2>
+              
+              <!-- Placeholder untuk menampilkan pesan error/sukses -->
+              <div id="alert-placeholder"></div>
+
+              <form id="registerForm" novalidate>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="registerEmail" placeholder="nama@contoh.com" required>
+                  <label for="registerEmail">Alamat Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
+                  <label for="registerPassword">Password</label>
+                </div>
+                <div class="form-floating mb-4">
+                  <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Konfirmasi Password" required>
+                  <label for="registerConfirmPassword">Konfirmasi Password</label>
+                </div>
+
+                <div class="d-grid">
+                  <button class="btn btn-primary btn-lg" type="submit" id="registerButton">
+                    <!-- Spinner untuk indikator loading -->
+                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                    Daftar
+                  </button>
+                </div>
+              </form>
+              <div class="text-center mt-4">
+                <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Placeholder Footer (jika ada) -->
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- SANGAT PENTING: Gunakan type="module" untuk bisa menggunakan import/export -->
+  <script type="module">
+    // Impor fungsi handleRegister dari controller
+    import { handleRegister } from './js/auth-controller.js';
+    
+    // Tambahkan event listener ke form setelah halaman dimuat
+    document.addEventListener('DOMContentLoaded', () => {
+      const registerForm = document.getElementById('registerForm');
+      registerForm.addEventListener('submit', handleRegister);
+    });
+  </script>
+
+</body>
+</html>

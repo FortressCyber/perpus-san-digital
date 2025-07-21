@@ -1606,5 +1606,46 @@ body {
     transform: translateX(-100%);
   }
 }
+body {
+  background-color: #f8f9fa;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+}
+
+/* Box shadow dan efek hover yang lebih halus */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Efek klik */
+.card:active {
+  transform: scale(0.98) translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-kembali {
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s;
+  display: inline-block; /* Agar transform bekerja */
+}
+
+.btn-kembali:hover {
+    transform: translateX(-5px);
+}
 
 
